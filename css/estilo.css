@@ -1,0 +1,301 @@
+:root {
+    --primary-color: #612674;
+    --default-gap: 1rem;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.mainHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.mainHeader_img img {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+}
+
+.mainHeader nav {
+    width: 100%;
+    margin: 0;
+
+
+}
+
+.mainHeader ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mainHeader li {
+    list-style-type: none;
+
+}
+
+.mainHeader a {
+    text-decoration: none;
+    display: block;
+    background-color: var(--primary-color);
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 1.2em;
+    box-sizing: border-box;
+    border-top: 0.1em solid black;
+    border-bottom: 0.1em solid black;
+}
+
+.mainHeader a:hover {
+    cursor: pointer;
+    background-color: color-mix(in srgb, var(--primary-color), white 10%);
+    filter: drop-shadow(0 0 0.3em black);
+    text-shadow: 0 0 0.2em black;
+}
+
+.heroBanner {
+    padding: 1.5em;
+    text-align: center;
+}
+
+.heroBanner_iconplay img {
+    display: none;
+}
+
+.heroBanner_title {
+    font-size: 0.9em;
+    color: var(--primary-color);
+}
+
+.heroBanner_text {
+    color: color-mix(in srgb, var(--primary-color), white 10%);
+    margin-bottom: 3em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.heroBanner_btn a {
+    background-color: #25d6f5;
+    text-decoration: none;
+    padding: 1em;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.middleContent {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.middleContent .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+
+}
+
+.col {
+    display: flex;
+}
+
+.col-sm-12 {
+    width: 100%;
+}
+
+.middleContent a {
+    text-decoration: none;
+}
+
+.icon-home3,
+.icon-map,
+.icon-spoon-knife,
+.icon-bubbles4 {
+    font-size: 5em;
+}
+
+.middleContent_title {
+    text-transform: uppercase;
+}
+
+.middleContent p {
+    text-align: justify;
+}
+
+.mainContent {
+    display: flex;
+    padding: 1.5em;
+    flex-direction: column;
+}
+
+.mainContent .row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--default-gap);
+}
+
+.mainContent_img img {
+    display: block;
+    max-width: 100%;
+}
+
+.mainContent_title {
+    letter-spacing: 0.3em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.mainContent_text p {
+    text-align: justify;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 3em;
+    text-align: center;
+}
+
+footer p:last-child {
+    text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+    .mainHeader {
+        flex-direction: row;
+        gap: 3em;
+        justify-content: space-between;
+    }
+
+    .mainHeader nav {}
+
+    .mainHeader ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mainHeader a {
+        background-color: initial;
+        color: var(--primary-color);
+        border: 0;
+        box-sizing: border-box;
+        flex-grow: 1;
+
+    }
+
+    .mainHeader a:hover {
+        color: white;
+
+    }
+
+    .heroBanner {
+        background-color: var(--primary-color);
+
+    }
+
+    .heroBanner_iconplay img {
+        display: inline-block;
+        width: 5em;
+        height: 5em;
+        text-align: center;
+
+    }
+
+    .heroBanner_title {
+        color: white;
+    }
+
+    .heroBanner_text {
+        color: white;
+    }
+
+    .middleContent .row {
+        gap: var(--default-gap);
+    }
+
+    .col-md-6 {
+        width: calc(50% - var(--default-gap));
+        flex-grow: 1;
+    }
+
+    .mainContent_container {
+        display: flex;
+    }
+
+
+    .mainContent_img {
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 25%;
+    }
+
+    .mainContent_img img {
+        height: 100%;
+    }
+
+
+}
+
+@media screen and (min-width:56.25em) {
+    .maxWidth {
+        max-width: 70.25em;
+        margin: auto;
+    }
+
+    .heroBanner {
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        aspect-ratio: 1198 / 670;
+        background-size: cover;
+        display: flex;
+        max-height: 80vh;
+        margin: auto;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    .heroBanner .maxWidth {
+        max-width: initial;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:74em) {
+    .col-xl-3 {
+        width: calc(25% - var(--default-gap));
+    }
+
+    .mainContent_container {
+        flex-direction: column;
+    }
+
+    .mainContent .row{
+        flex-direction: row;
+    }
+
+
+    .col-xl-6 {
+        width: calc(50% - var(--default-gap));
+
+    }
+
+    .mainContent_img{
+        filter: drop-shadow(0 0 0.5em black);
+    }
+}
